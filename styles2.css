@@ -1,0 +1,232 @@
+/* styles.css */
+
+body {
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f0f8ff; /* Azul claro */
+}
+
+.custom-header {
+    width: 100%;
+    
+    background-color: #1e3a5f; /* Azul oscuro */
+    color: white;
+    padding: 6px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.custom-header .header-content {
+    display: flex;
+    align-items: center;
+}
+
+.custom-header .logo {
+    height: 40px; /* Ajusta el tamaño del logo según sea necesario */
+    margin-right: 20px;
+}
+
+.custom-header h1 {
+    margin: 0;
+    font-size: 24px; 
+    align-items: center;/* Ajusta el tamaño del texto según sea necesario */
+}
+header {
+    background-color: #1e3a5f; /* Azul oscuro */
+    color: #ffffff;
+    padding: 20px 0;
+    text-align: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+header h1 {
+    margin: 0;
+    font-size: 2.5em;
+    letter-spacing: 2px;
+}
+
+main {
+    padding: 40px 20px;
+    max-width: 900px;
+    margin: auto;
+    background-color: #ffffff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    margin-top: 20px;
+}
+
+section {
+    margin-bottom: 40px;
+}
+
+section h2 {
+    color: #1e3a5f; /* Azul oscuro */
+    border-bottom: 2px solid #1e90ff; /* Azul cielo */
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+}
+
+pre {
+    background-color: #f4f4f4;
+    padding: 15px;
+    border-left: 5px solid #1e3a5f; /* Azul oscuro */
+    overflow: auto;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 10px;
+    padding: 20px;
+    width: 100%;
+    max-width: 1200px;
+    justify-content: center;
+}
+
+.grid-item {
+    position: relative;
+    overflow: hidden;
+}
+
+.grid-image {
+    width: 70%;
+    transition: transform 0.2s ease;
+}
+
+.grid-item:hover .grid-image {
+    transform: scale(0.95);
+}
+
+footer {
+    background-color: #1e3a5f; /* Azul oscuro */
+    color: #ffffff;
+    text-align: center;
+    padding: 15px 0;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    box-shadow: 0 -2px 6px rgba(0, 0, 0, 0.1);
+}
+
+footer p {
+    margin: 0;
+    font-size: 1em;
+}
+
+/* Estilo del Menu de CSS que se mueve con el footer */
+nav {
+    background-color: #1e3a5f; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+ul {
+    display: flex;
+    justify-content:center;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+   
+}
+li {
+    margin: 0 10px;
+}
+p {
+font-size: 18px;
+line-height: 1.6;
+}
+
+.box {
+background-color: #007bff;
+color: #fff;
+padding: 20px;
+margin-bottom: 20px;
+border-radius: 5px;
+box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+.box:hover {
+background-color: #0056b3;
+}
+
+.box h2 {
+margin-top: 0;
+}
+
+.box p {
+margin-bottom: 0;
+}
+button {
+    background-color: #007bff;
+    color: white;
+    padding: 12px 30px;
+    border: none;
+    border-radius: 50px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s, box-shadow 0.3s;
+    position: relative;
+}
+button:hover {
+    background-color: #0056b3;
+    transform: translateY(-2px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+/* Media query para pantallas pequeñas (teléfonos) */
+@media only screen and (max-width: 600px) {
+    ul {
+       flex-direction: column;
+       gap: 10px;
+     }
+    li {
+       margin-right: 0;
+     }
+    a {
+       font-size: 16px;
+     }
+   }
+/* Media query para pantallas grandes (ordenadores) */
+@media only screen and (min-width: 901px) {
+    ul {
+       flex-direction: row;
+     }
+    li {
+       margin-right: 10px;
+     }
+    a {
+       font-size: 20px;
+     }
+   }
+
+/* Contenedor del ejemplo de flexbox */
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+  
+  .column {
+    flex-basis: 30%; /* ancho de cada columna */
+    margin: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .column img {
+    width: 100%;
+    height: 250px; /* alto de las imágenes */
+    object-fit: cover;
+    margin-bottom: 10px;
+  }
+  
+  .column p {
+    text-align: center;
+  }
+

@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Transición Suave</title>
+    <link rel="icon" href="Imagenes/logo.png" type="image/x-icon">
+    <style>
+      .animated-button {
+        padding: 10px 20px;
+        font-size: 16px;
+        color: white;
+        border: none;
+        cursor: pointer;
+        background-color: #1a73e8; /* Color inicial */
+        animation: colorChange 3s infinite alternate;
+        transition: background-color 0.5s ease;
+      }
+
+      @keyframes colorChange {
+        0% {
+          background-color: #1a73e8; /* Azul oscuro */
+        }
+        100% {
+          background-color: #63a4ff; /* Azul claro */
+        }
+      }
+
+      .fade-out {
+        opacity: 0;
+        transition: opacity 0.8s ease; /* Duración de la transición*/
+      }
+
+      .content {
+        transition: opacity 0.8s ease; /* Duración de la transición*/
+      }
+    </style>
+  </head>
+  <body class="content">
+    <button class="animated-button" onclick="navigateTo('index.html')">
+      Botón Animado
+    </button>
+
+    <script>
+      function navigateTo(url) {
+        document.body.classList.add("fade-out");
+        setTimeout(function () {
+          window.location.href = url;
+        }, 800); // duración de la animación de desvanecimiento
+      }
+    </script>
+
+    <section>
+      <p>
+        Para crear este botón se utiliza CSS INTERNO, creando la clase
+        animated-button y la propiedad animation en CSS junto con @keyframes.
+      </p>
+      <p>
+        Para la transición suave a la otra página sí se usa una combinación de
+        css y javascript.
+      </p>
+    </section>
+
+    <section>
+      <h2>Explicación del Código</h2>
+
+      <h3>CSS:</h3>
+      <p>
+        <strong>.animated-button:</strong> Define los estilos básicos del botón,
+        incluyendo el relleno, tamaño de fuente, color de texto, borde y cursor.
+        También establece el color de fondo inicial.
+      </p>
+      <p>
+        <strong>animation: colorChange 3s infinite alternate;</strong> Aplica la
+        animación al botón. Aquí se define:
+      </p>
+      <ul>
+        <li>
+          <strong>colorChange:</strong> Nombre de la animación (definida más
+          adelante).
+        </li>
+        <li><strong>3s:</strong> Duración de la animación (3 segundos).</li>
+        <li>
+          <strong>infinite:</strong> La animación se repite indefinidamente.
+        </li>
+        <li>
+          <strong>alternate:</strong> La animación alterna en ambas direcciones
+          (de azul oscuro a azul claro y viceversa).
+        </li>
+      </ul>
+
+      <h3>@keyframes colorChange:</h3>
+      <p>Define los fotogramas clave para la animación:</p>
+      <ul>
+        <li>
+          <strong>0% { background-color: #1a73e8; }</strong> Define el color
+          inicial (azul oscuro).
+        </li>
+        <li>
+          <strong>100% { background-color: #63a4ff; }</strong> Define el color
+          final (azul claro).
+        </li>
+      </ul>
+      <p>
+        <strong>.fade-out:</strong> Define la animación de desvanecimiento
+        cuando se hace clic.
+      </p>
+      <p>
+        <strong>.content:</strong> Define la transición de opacidad para el
+        contenido de la página.
+      </p>
+
+      <h3>HTML:</h3>
+      <p>
+        Se incluye un botón con la clase <strong>animated-button</strong> y un
+        evento <strong>onclick</strong> que llama a la función
+        <strong>navigateTo</strong>.
+      </p>
+
+      <h3>JavaScript:</h3>
+      <p>
+        <strong>navigateTo(url):</strong> Agrega la clase
+        <strong>fade-out</strong> al cuerpo del documento, lo que inicia la
+        animación de desvanecimiento.
+      </p>
+      <p>
+        Después de un retraso de 500 ms (para coincidir con la duración de la
+        animación), la función redirige al usuario a la nueva página mediante
+        <strong>window.location.href = url</strong>.
+      </p>
+
+      <h3>Consideraciones:</h3>
+      <p>
+        Asegúrate de que la duración del <strong>setTimeout</strong> en
+        JavaScript coincida con la duración de la transición CSS (0.8s en este
+        caso).
+      </p>
+      <p>
+        Puedes ajustar la duración y el estilo de la transición según tus
+        necesidades.
+      </p>
+      <p>
+        Este enfoque proporciona una transición visualmente agradable al hacer
+        clic en el botón, mejorando la experiencia del usuario.
+      </p>
+    </section>
+  </body>
+</html>

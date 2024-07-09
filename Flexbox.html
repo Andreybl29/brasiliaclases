@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flexbox en CSS</title>
+    <link rel="stylesheet" href="styles2.css">
+        <link rel="icon" href="img/logo.png" type="image/x-icon">
+</head>
+<body>
+    <header class="custom-header">
+        <div class="header-content">
+            <a href="index.html"><img src="img/logo.png" alt="Logo de la página" class="logo"></a>
+            <h1>Diseño Web</h1>
+        </div>
+    </header>
+    <header>
+        <h1>CSS Flexbox</h1>
+    </header>
+    <main>
+        <section id="que-es">
+            <h2>¿Qué es?</h2>
+            <p>Flexbox, o el Módulo Flexible de Caja, es un modelo de diseño unidimensional que permite distribuir el espacio entre los elementos de una interfaz y alinearlos en un contenedor flexible. Es especialmente útil para crear diseños responsivos y dinámicos.</p>
+        </section>
+
+        <section id="para-que-sirve">
+            <h2>¿Para qué sirve?</h2>
+            <p>Flexbox se utiliza para diseñar layouts más complejos y adaptativos, donde la disposición de los elementos puede cambiar de acuerdo con el tamaño del contenedor. Proporciona un control preciso sobre el alineamiento, el tamaño y la distribución de los elementos dentro de un contenedor.</p>
+        </section>
+
+        <section id="como-se-usa">
+            <h2>¿Cómo se usa?</h2>
+            <p>Para usar Flexbox, se debe definir un contenedor como un flexbox utilizando la propiedad <code>display: flex;</code>. Luego, se pueden usar varias propiedades de Flexbox para controlar la alineación y distribución de los elementos hijos.</p>
+            <pre><code>/* Contenedor Flex */
+.container {
+    display: flex;
+    justify-content: space-between; /* Distribuir espacio entre elementos */
+    align-items: center; /* Alinear elementos al centro verticalmente */
+}
+
+/* Elementos hijos */
+.item {
+    background-color: #1e90ff; /* Azul cielo */
+    color: #fff;
+    padding: 20px;
+    margin: 10px;
+    text-align: center;
+}
+            </code></pre>
+        </section>
+
+        <section id="atributos">
+            <h2>Atributos de Flexbox</h2>
+            <p>Flexbox tiene muchos atributos que permiten un control detallado del diseño:</p>
+            <ul>
+                <li><code>flex-direction</code>: Define la dirección del flujo de los elementos (fila, columna).</li>
+                <li><code>justify-content</code>: Alinea los elementos a lo largo del eje principal (start, end, center, space-between, space-around).</li>
+                <li><code>align-items</code>: Alinea los elementos a lo largo del eje transversal (start, end, center, stretch).</li>
+                <li><code>flex-wrap</code>: Controla si los elementos deben envolverse o no.</li>
+                <li><code>align-content</code>: Alinea las líneas de un contenedor cuando hay espacio extra en el eje transversal.</li>
+                <li><code>order</code>: Define el orden de los elementos dentro de un contenedor flex.</li>
+                <li><code>flex-grow</code>: Define la capacidad de un elemento para crecer si es necesario.</li>
+                <li><code>flex-shrink</code>: Define la capacidad de un elemento para encogerse si es necesario.</li>
+                <li><code>flex-basis</code>: Define el tamaño inicial de un elemento antes de que se distribuya el espacio restante.</li>
+            </ul>
+        </section>
+
+        <!-- Ejemplo de flexbox con 3 columnas -->
+
+        <section id="Ejemplo">
+            <h2>Ejemplo</h2>
+            <p>En este ejemplo, creamos un contenedor con la clase container que utiliza flexbox para organizar sus elementos hijos en tres columnas. 
+                Cada columna tiene una imagen y un texto, y se utilizan las propiedades flex-basis y margin para establecer el ancho y el espacio entre las columnas, 
+                además de otros atributos.</p>
+        </section>
+<div class="container">
+    <div class="column">
+      <img src="img/prueba.jpg" alt="Imagen 1">
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi sodales maximus ligula quis dictum.</p>
+    </div>
+    <div class="column">
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi sodales maximus ligula quis dictum.</p>
+      <img src="img/prueba.jpg" alt="Imagen 2">
+    </div>
+    <div class="column">
+      <img src="img/prueba.jpg" alt="Imagen 3">
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi sodales maximus ligula quis dictum.</p>
+    </div>
+  </div>
+        <section><br><br></section>
+    </main>
+    <footer>
+        <nav>
+            <ul id="menu">
+              <li><a href="lenguajecss.html"><button>CSS3</button></a></li>
+                <li><a href="MetodosAplicacion.html"><button>Métodos de aplicación</button></a></li>
+                <li><a href="Flexbox.html"><button>Flexbox</button></a></li>
+                <li><a href="GridLayout.html"><button>Grid Layout</button></a></li>
+            </ul>
+          </nav>   
+    </footer>
+</body>
+</html>

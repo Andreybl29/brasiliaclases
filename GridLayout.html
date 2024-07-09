@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grid Layout en CSS</title>
+    <link rel="icon" href="img/logo.png" type="image/x-icon">
+    <link rel="stylesheet" href="styles2.css">
+</head>
+<body>
+    <header class="custom-header">
+        <div class="header-content">
+            <a href="index.html"><img src="img/logo.png" alt="Logo de la página" class="logo"></a>
+            <h1>Diseño Web</h1>
+        </div>
+    </header>
+    <header>
+        <h1>CSS Grid Layout</h1>
+    </header>
+    <main>
+        <section id="que-es">
+            <h2>¿Qué es?</h2>
+            <p>Grid Layout, o CSS Grid, es un sistema de diseño bidimensional que permite crear diseños de página complejos utilizando filas y columnas. Es una herramienta poderosa que facilita la creación de layouts más flexibles y consistentes.</p>
+        </section>
+
+        <section id="para-que-sirve">
+            <h2>¿Para qué sirve?</h2>
+            <p>Grid Layout se utiliza para definir la estructura de una página web de una manera más clara y sencilla. Permite organizar el contenido en una cuadrícula, lo que facilita la colocación y alineación de elementos en relación entre sí. Es especialmente útil para crear diseños responsivos que se adaptan a diferentes tamaños de pantalla.</p>
+        </section>
+
+        <section id="como-se-usa">
+            <h2>¿Cómo se usa?</h2>
+            <p>Para usar Grid Layout, se debe definir un contenedor como un grid utilizando la propiedad <code>display: grid;</code>. Luego, se configuran las filas y columnas utilizando propiedades como <code>grid-template-rows</code> y <code>grid-template-columns</code>. Los elementos hijos se colocan dentro de este contenedor y se posicionan usando propiedades específicas de Grid.</p>
+            <pre><code>/* Contenedor de Grid */
+.container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* Tres columnas de igual ancho */
+    grid-gap: 10px; /* Espacio entre elementos */
+}
+
+/* Elementos hijos */
+.item {
+    background-color: #1e90ff; /* Azul cielo */
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+}
+            </code></pre>
+        </section>
+
+        <section id="atributos">
+            <h2>Atributos de Grid Layout</h2>
+            <p>Grid Layout tiene muchos atributos que permiten un control detallado del diseño:</p>
+            <ul>
+                <li><code>grid-template-columns</code>: Define el número y tamaño de las columnas.</li>
+                <li><code>grid-template-rows</code>: Define el número y tamaño de las filas.</li>
+                <li><code>grid-gap</code>: Establece el espacio entre filas y columnas.</li>
+                <li><code>grid-column</code> y <code>grid-row</code>: Posicionan los elementos hijos en la cuadrícula.</li>
+                <li><code>justify-items</code> y <code>align-items</code>: Alinean los elementos dentro de las celdas de la cuadrícula.</li>
+                <li><code>grid-area</code>: Permite nombrar y colocar áreas de la cuadrícula.</li>
+                <li><code>grid-template-areas</code>: Define áreas de la cuadrícula con nombres específicos.</li>
+            </ul>
+        </section>
+
+        <!-- Ejemplo de Grid con 3 columnas y 6 elementos -->
+        <section>
+            <h2>Ejemplo</h2>
+       
+        <section class="grid-container">
+            <div class="grid-item">
+                <img src="img/imagen1.png" alt="Sección 1" class="grid-image">
+            </div>
+            <div class="grid-item">
+                <img src="img/imagen2.png" alt="Sección 2" class="grid-image">
+            </div>
+            <div class="grid-item">
+                <img src="img/imagen3.png" alt="Sección 3" class="grid-image">
+            </div>
+            <div class="grid-item">
+                <img src="img/imagen4.png" alt="Sección 4" class="grid-image">
+            </div>
+            <div class="grid-item">
+                    <img src="img/imagen5.png" alt="Sección 5" class="grid-image">
+            </div>
+            <div class="grid-item">
+                    <img src="img/imagen6.png" alt="Sección 6" class="grid-image">
+            </div>
+        </section>
+    </section>
+    </main>
+    <footer>
+        <nav>
+            <ul id="menu">
+              <li><a href="lenguajecss.html"><button>CSS3</button></a></li>
+                <li><a href="MetodosAplicacion.html"><button>Métodos de aplicación</button></a></li>
+                <li><a href="Flexbox.html"><button>Flexbox</button></a></li>
+                <li><a href="GridLayout.html"><button>Grid Layout</button></a></li>
+            </ul>
+          </nav>   
+    </footer>
+</body>
+</html>
