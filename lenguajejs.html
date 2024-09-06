@@ -2,17 +2,119 @@
 <html lang="es">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>JavaScript</title>
-    <link rel="icon" href="img/logo.png" type="image/x-icon">
-    <link rel="stylesheet" href="styles.css">
+    <title>Ejemplos de Implementación de JavaScript</title>
+    <!-- Ejemplo de JavaScript en la sección <head> -->
+    <script>
+        function mostrarMensaje() {
+            alert('¡Hola desde un script en la sección <head>!');
+        }
+    </script>
+    <style>
+        /* Simple estilo para mejorar la presentación */
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 20px;
+        }
+        section {
+            margin-bottom: 30px;
+        }
+        code {
+            background-color: #f4f4f4;
+            display: block;
+            padding: 10px;
+            margin-top: 10px;
+        }
+        pre {
+            background-color: #f4f4f4;
+            padding: 10px;
+        }
+    </style>
 </head>
 <body>
-    <header class="custom-header">
-        <div class="header-content">
-            <a href="index.html"><img src="img/logo.png" alt="Logo de la página" class="logo"></a>
-            <h1>Diseño Web</h1>
-        </div>
-    </header>
+    <h1>Ejemplos de Implementación de JavaScript</h1>
+
+
+    <!-- Sección 2: JavaScript en la sección <head> -->
+    <section>
+        <h2>Ejemplo 1: JavaScript en la Sección <code>&lt;head&gt;</code></h2>
+        <p>Este ejemplo utiliza una función JavaScript definida en la sección <code>&lt;head&gt;</code> del documento. Cuando se hace clic en el botón, se llama a la función <code>mostrarMensaje()</code> que muestra una alerta.</p>
+        <!-- Ejemplo de script funcionando -->
+        <button onclick="mostrarMensaje()">Mostrar Mensaje</button>
+        <!-- Código utilizado -->
+        <pre><code>&lt;script&gt;
+function mostrarMensaje() {
+    alert('¡Hola desde un script en la sección &lt;head&gt;!');
+}
+&lt;/script&gt;
+
+&lt;button onclick="mostrarMensaje()"&gt;Mostrar Mensaje&lt;/button&gt;
+</code></pre>
+        <p><strong>Explicación:</strong> La función <code>mostrarMensaje()</code> está definida en un bloque <code>&lt;script&gt;</code> dentro de la sección <code>&lt;head&gt;</code>. Cuando se hace clic en el botón, se llama a esta función y se muestra una alerta.</p>
+    </section>
+
+    <!-- Sección 3: JavaScript al final del <body> -->
+    <section>
+        <h2>Ejemplo 2: JavaScript al Final del <code>&lt;body&gt;</code></h2>
+        <p>Este ejemplo muestra cómo usar JavaScript al final de la sección <code>&lt;body&gt;</code> para manipular un elemento de la página. Cuando el mouse pasa sobre el texto, el color cambia a azul; cuando el mouse se aleja, vuelve a negro.</p>
+        <!-- Ejemplo de script funcionando -->
+        <p id="parrafo">Pasa el mouse sobre este texto para cambiar su color.</p>
+        <!-- Código utilizado -->
+        <pre><code>&lt;p id="parrafo"&gt;Pasa el mouse sobre este texto para cambiar su color.&lt;/p&gt;
+
+&lt;script&gt;
+document.getElementById('parrafo').onmouseover = function() {
+    this.style.color = 'blue';
+};
+document.getElementById('parrafo').onmouseout = function() {
+    this.style.color = 'black';
+};
+&lt;/script&gt;
+</code></pre>
+        <p><strong>Explicación:</strong> El script usa <code>document.getElementById</code> para seleccionar el párrafo por su <code>id</code>. Se asignan dos funciones de evento: <code>onmouseover</code> y <code>onmouseout</code>. Estas funciones cambian el color del texto cuando el mouse pasa sobre él o se aleja.</p>
+    </section>
+
+    <!-- Sección 4: JavaScript externo -->
+    <section>
+        <h2>Ejemplo 3: JavaScript Externo</h2>
+        <p>Este ejemplo muestra cómo enlazar un archivo JavaScript externo al documento HTML. El script externo puede contener funciones complejas o múltiples líneas de código, lo que ayuda a mantener el HTML limpio y organizado.</p>
+        <!-- Ejemplo de script funcionando (simulado, porque necesita el archivo externo) -->
+        <p>Revisa la consola del navegador para ver un mensaje desde el script externo.</p>
+        <!-- Código utilizado -->
+        <pre><code>&lt;!-- Archivo HTML --&gt;
+&lt;script src="script.js"&gt;&lt;/script&gt;
+
+&lt;!-- Archivo JavaScript externo (script.js) --&gt;
+console.log('Este mensaje viene de un archivo JavaScript externo.');
+
+function cambiarTexto() {
+    document.getElementById('parrafo').innerText = '¡Texto cambiado por JavaScript externo!';
+}
+
+document.getElementById('parrafo').onclick = cambiarTexto;
+</code></pre>
+        <p><strong>Explicación:</strong> El archivo JavaScript externo (<code>script.js</code>) se enlaza al documento HTML usando el atributo <code>src</code> en la etiqueta <code>&lt;script&gt;</code>. Este script contiene código que se ejecuta al cargar la página, como registrar un mensaje en la consola y cambiar el texto de un párrafo al hacer clic.</p>
+    </section>
+
+     <!-- Sección 1: JavaScript en línea (event handlers inline) en un elemento HTML -->
+     <section>
+        <h2>Ejemplo 4: JavaScript en Línea</h2>
+        <p>Este ejemplo muestra cómo utilizar JavaScript directamente en un elemento HTML utilizando el atributo <code>onclick</code>. Cuando se hace clic en el botón, se ejecuta un pequeño script que muestra una alerta.</p>
+        <!-- Ejemplo de script funcionando -->
+        <button onclick="alert('¡Hola desde un botón!')">Haz clic aquí</button>
+        <!-- Código utilizado -->
+        <pre><code>&lt;button onclick="alert('¡Hola desde un botón!')"&gt;Haz clic aquí&lt;/button&gt;</code></pre>
+        <p><strong>Explicación:</strong> El atributo <code>onclick</code> contiene código JavaScript que se ejecuta cuando se hace clic en el botón. En este caso, muestra una alerta con el mensaje "¡Hola desde un botón!".</p>
+    </section>
+
+    <!-- JavaScript para el Ejemplo 3 -->
+    <script>
+        document.getElementById('parrafo').onmouseover = function() {
+            this.style.color = 'blue';
+        };
+        document.getElementById('parrafo').onmouseout = function() {
+            this.style.color = 'black';
+        };
+    </script>
 </body>
 </html>

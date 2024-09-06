@@ -9,3 +9,15 @@ document.querySelectorAll('.flex-item a').forEach(item => {
         }, 500); // Tiempo de espera para la animación (0.5s)
     });
 });
+
+// Muestra un mensaje en la consola del navegador al cargar la página
+console.log('Este mensaje viene de un archivo JavaScript externo.');
+
+// Función para cambiar el texto de un párrafo
+function cambiarTexto() {
+    document.getElementById('parrafo').innerText = '¡Texto cambiado por JavaScript externo!';
+}
+
+// Asigna la función cambiarTexto al evento onclick del párrafo
+document.getElementById('parrafo').onclick = cambiarTexto;
+
